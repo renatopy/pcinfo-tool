@@ -44,8 +44,7 @@ class ExamplePanel(wx.Panel):
         # A button
         self.button =wx.Button(self, label="Read", pos=(360, 105))
         self.Bind(wx.EVT_BUTTON, self.OnClick,self.button)
- 
-
+        
     def OnClick(self,event):
         #self.logger.AppendText(" Click on object with Id %d\n" %event.GetId())
         myname=socket.getfqdn(socket.gethostname())
@@ -62,8 +61,6 @@ class ExamplePanel(wx.Panel):
         self.logger.AppendText("\nLAN IP:"+myaddr)
         self.logger.AppendText("\nMAC:"+get_mac_address())
 
- 
- 
 app = wx.App(False)
 frame = wx.Frame(None,title = "My tool", size = (480,400))
 panel = ExamplePanel(frame)
