@@ -19,7 +19,7 @@ class PCHardwork(object):
         for pd in s.Win32_DiskDrive():#much diskdrive information
             disk.append(
                 {
-                "SerialNumber": s.Win32_PhysicalMedia()[0].SerialNumber.lstrip().rstrip(), # 获取硬盘序列号，调用另外一个win32 API
+                "SerialNumber": s.Win32_PhysicalMedia()[0].SerialNumber.lstrip().rstrip(),
                 "Caption": pd.Caption,
                 "Size": str(int(float(pd.Size)/1024/1024/1024))+"G"
                 }
