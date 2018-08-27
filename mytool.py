@@ -56,7 +56,7 @@ class ExamplePanel(wx.Panel):
             self.logger.AppendText("Disk"+str(num)+":"+str(info)+"\n")
         self.logger.AppendText("InstallDate:"+PCinfo.get_sys_info())
         self.logger.AppendText("\nOS:"+platform.platform())
-        self.logger.AppendText("\nArch:"+platform.architecture()[0])
+        self.logger.AppendText("\nMachine:"+platform.machine())
         self.logger.AppendText("\nUser:"+myname)
         self.logger.AppendText("\nLAN IP:"+myaddr)
         self.logger.AppendText("\nMAC:"+get_mac_address())
