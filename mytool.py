@@ -24,8 +24,7 @@ class PCHardwork(object):
                 "Size": str(int(float(pd.Size)/1024/1024/1024))+"G"
                 }
                        )
-        #print("Disk information:\n",json.dumps(disk, sort_keys=True, indent=4))
-        
+  
         return disk
     def get_sys_info(self):
         pstr=''
@@ -46,7 +45,6 @@ class ExamplePanel(wx.Panel):
         self.Bind(wx.EVT_BUTTON, self.OnClick,self.button)
         
     def OnClick(self,event):
-        #self.logger.AppendText(" Click on object with Id %d\n" %event.GetId())
         myname=socket.getfqdn(socket.gethostname())
         myaddr=socket.gethostbyname(myname)
         PCinfo = PCHardwork()
